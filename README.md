@@ -1,2 +1,2 @@
 # FuelForce
-React Native fuel controller application
+React Native fuel monitoring application
