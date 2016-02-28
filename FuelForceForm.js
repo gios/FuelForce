@@ -4,8 +4,7 @@ import React, { Component,
          StyleSheet,
          View,
          Text,
-         TextInput,
-         TouchableNativeFeedback } from 'react-native'
+         TextInput } from 'react-native'
 import moment from 'moment'
 import Button from 'react-native-button'
 import 'moment/locale/uk'
@@ -14,9 +13,9 @@ class FuelForceForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      pricePerLiter: 0,
-      totalPrice: 0,
-      amountLiters: 0,
+      pricePerLiter: '',
+      totalPrice: '',
+      amountLiters: '',
       date: moment().format('D MMMM YYYY')
     }
   }
