@@ -6,7 +6,9 @@
     "start": "node node_modules/react-native/local-cli/cli.js start"
   },
   "dependencies": {
-    "react-native": "^0.20.0"
+    "moment": "^2.11.2",
+    "react-native": "^0.20.0",
+    "react-native-button": "^1.4.2"
   },
   "devDependencies": {
     "eslint": "^2.2.0",

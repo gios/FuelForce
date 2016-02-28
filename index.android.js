@@ -1,51 +1,47 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- */
-'use strict';
+'use strict'
+
 import React, {
   AppRegistry,
   Component,
   StyleSheet,
   Text,
-  View
-} from 'react-native';
+  View,
+  ViewPagerAndroid
+} from 'react-native'
+
+import FuelForceForm from './FuelForceForm'
+
+// TODO
+// Data
+// Price per litr
+// Total proce
+// Count of liters
+// Button
+// Swipe right List
 
 class FuelForce extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
+      <ViewPagerAndroid style={styles.viewPager} initialPage={0}>
+        <View style={styles.pageStyle}>
+          <FuelForceForm/>
+        </View>
+        <View style={styles.pageStyle}>
+          <Text>Second page</Text>
+        </View>
+      </ViewPagerAndroid>
+    )
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
+  viewPager: {
+    flex: 1
+  },
+  pageStyle: {
     alignItems: 'center',
-    backgroundColor: '#F5FCFF'
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5
+    padding: 20
   }
-});
+})
 
-AppRegistry.registerComponent('FuelForce', () => FuelForce);
+AppRegistry.registerComponent('FuelForce', () => FuelForce)
